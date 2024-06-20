@@ -16,7 +16,7 @@ const Cards = () => {
 
    const cardss = cards.slice(indexOfFirstCard, indexOfLastCard);
 
-  return (<div className="flex flex-col justify-between  mt-[1rem] h-[120vh] gap-20">
+  return (<div className="flex flex-col justify-between  mt-[1rem] h-[100vh] gap-20">
      <div className="flex justify-center items-center gap-6 h-[55vh] flex-wrap w-full">
       {cards?.length > 0 ? (
         cardss.map((article, ii) => (
@@ -47,9 +47,7 @@ const Cards = () => {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <p className="text-gray-600 text-sm">Language :<span className="text-black text-lg">{article.language}</span></p>
-                <p className="text-gray-600 text-sm">
-                  country: <span className="text-black text-lg">{article.country}</span>
-                </p>
+                
                 <p className="text-gray-600 text-sm">
                   authour: <span className="text-black text-lg">{article.author.slice(0,5) + "..."}</span>
                 </p>
@@ -88,61 +86,3 @@ const Cards = () => {
 };
 
 export default Cards;
-// : (
-//     <h1>loading...</h1>
-//   );
-{/* <div className="flex justify-center mt-[5rem] items-center gap-6 h-[100vh] flex-wrap w-full">
-      {cards?.length > 0 ? (
-        cards.map((article, i) => (
-          <div key={i}>
-            <div className="w-[300px] rounded-2xl shadow-lg transform border-[2px] py-[2rem] px-[2rem] transition duration-500 hover:scale-105 bg-white">
-              <img
-                className="w-full h-48 object-cover"
-                src={
-                  article.urlToImage?.length > 0
-                    ? article.urlToImage
-                    : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAACUCAMAAAAXgxO4AAAAM1BMVEXm5uaztbStr662uLfi4uLp6enc3Ny5u7qwsrHf39/AwcDZ2dnFxsXs7OzIycjU1NTNz86YqaaqAAAEVklEQVR4nO2bi1LkKhBAQbp5B/j/r90GMjoakqxrzcLe26csNRkyniENNBCFYBiGYRiGYRiGYRiGYRiGYRiGYRiG+V+DF8x2uySZU9JstwvAWHmKNTDb7wyMF95kHpeNlivtymy/M/RlhVOV69mGY7DciZc1YwXTXaisGuT+TtzPNhyCwtyJG7FKlSOCfierO3GVP0rD1KE0q7cn7rypeT6VVnmaNlwPOLefIs4aSn/mXc3neN+MNy0sbopMGZG2ywq3JpWcS7pKu6h/3GaYX3QiPotto14Dt03ki+5dzfA+Fyftp64OL9SXErcJvvTQCOkkYFYStx/d89MQk8fmC4nb/GhvLpeS3X6whaH5OuJ75opQjH2z9GVKD5xxzruMuPVtMMT80Qtak3vE+IH5MuIqYPOWT5JWtruAYVR+FfE2hpP3F3qdx4XFW4W7r6OlNbWNol5X3LTzx07b9sWg40RjEfG+cOJGsVzbLB4/0SLiby2WRz12G5UwH6Yaq4jXLHVQrzVW2r1YVdy2Njjqr61v4quGyrm4/FfFF6/xFuOD3vDRH+plY7yN7aOpaJtcDvKsRcR7JMMxVnruhceJ0CribZwZTRra5AIGFywi3vPAQ5XvFX7IvRYSb8ux6NQnc6tcyw4HU+ZlxHsCi582sayBPUlfWbwlsHVar2xzt1btk343WoReR9w+1u518fS68uWxyjYcUNcRf98TpO9AiH1paJwIrCReu5DDij0O+vblxCnOw+cdExThbOlzLXEro/5QR6GTPFuynSKO53tV1tRGudUF29pIz1ea1Yx9oOv1cZJSxpjr/Swbp6yPu0up38Ld/5UXcLsFfkefic7gvNX9jrac+OhNiPLtD5ExzPMWP9niXmV3nFmPuQ/wwfeb1O4L+eypA3rPP3jbb+Lsd68A1YfHaE7EURtwL98dB1kTbe2E03UGrOk3ylp1S71B749DAPRXHb2KQbazrm7b1gtFLSrgqVDwJP7qQZTEXYzRlORpspNi8hmdpx8Bc0yxVSqWGD2l5cGnWESRufpl47X20RfKFmkASFjogN6i0LUehHz1IyBVXGWRjAOpdQSSRJOElsF5jbkvRCQFQIYUG9po3R83BKpxUyhwsibdHDEaqAdGi0LT6b8i7l3VRRMQQjJRWBCbD1mlklRfIvcbpkKhKzAWkFsXD0Dp95bSQzzh5nOOFON0d8yLvT+LB+VzeRc3dSu513jcyLgKilTcF/EYvMCD+MsfkHuI+ypeBROFSqHwCdq7zZUu7qs4GI1ggrO4i6PJdBVFB30ev4tX6Uy35m90h3oXVyGY2rLohE8qIEWNbwkfRrofsWDpJ2QL/Cqe6UQUwlOz3Gu80IesDdm9/lHn2p/1Ls2BcMHRkQYnKODbUQMeJdoJ5x4X0jij+3eAXoiOdGhFX+09YPMRypz5+g8But3LPtR+yer/AMEwDMMwDMMwDMMwDMMwDMMwDMMwzH+KX0GRLZnFQjGzAAAAAElFTkSuQmCC"
-                }
-                alt={article.title}
-              />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">
-                  {article?.title
-                    ? article.title.slice(0, 28) + "..."
-                    : article.title}
-                </div>
-                <p className="text-gray-700 text-base">
-                  {article?.description
-                    ? article.description.slice(0, 55) + "..."
-                    : "Description not found!! Description not found!!Description not..."}
-                </p>
-              </div>
-              <div className="px-6 pt-4 pb-2">
-                <a
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-md border border-neutral-300 bg-neutral-100 hover:text-black hover:border-2 text-neutral-500 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
-                >
-                  Read More
-                </a>
-              </div>
-              <div className="px-6 pt-4 pb-2">
-                <p className="text-gray-600 text-sm">By {article.author}</p>
-                <p className="text-gray-600 text-sm">
-                  Published on{" "}
-                  {new Date(article.publishedAt).toLocaleDateString()}
-                </p>
-                <p className="text-gray-600 text-sm">
-                  Source: {article.source.name}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))
-      ) : (
-        <div className="flex justify-center items-center h-screen">
-          <div className="w-12 h-12 border-4 border-grey-500 rounded-full animate-spin border-b-transparent"></div>
-        </div>
-      )}
-    </div> */}
