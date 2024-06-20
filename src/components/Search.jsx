@@ -89,7 +89,7 @@ const Search = () => {
           </div>
           <button
             onClick={handleReset}
-            className="px-2 py-2 rounded-md border border-red-300 w-[10%] bg-red-400 text-black text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
+            className="px-2 py-2 rounded-md border border-red-300 w-[50%] md:w-[10%] bg-red-400 text-black text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
           >
             Reset Filters
           </button>
@@ -101,5 +101,3 @@ const Search = () => {
 };
 
 export default Search;
-
-// {noResults ? <div>No Card Found</div>: ""}
