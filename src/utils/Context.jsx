@@ -36,7 +36,7 @@ const Context = (props) => {
   }
 
   return (
-    <dataContext.Provider value={[data, setData]}>
+    <dataContext.Provider value={[data,  setData]}>
       {props.children}
     </dataContext.Provider>
   );
